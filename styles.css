@@ -13,3 +13,27 @@ body {
 .img-txtrag {
     width: 300;
 }
+
+/* Container for the images */
+.image-container {
+    display: flex;
+    justify-content: center; /* Align horizontal */
+    align-items: flex-start; /* Align vertical */
+    gap: 10px; /* Space between the images */
+  }
+  
+  /* Style for the figures */
+  .side-by-side {
+    max-width: 50%; /* Each figure can take up to half of the container width */
+  }
+  
+  /* Style for the images within the figures */
+  .side-by-side img {
+    width: 100%; /* Make the image fill the figure element */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Caption styling */
+  .side-by-side figcaption {
+    text-align: center; /* Center the caption text */
+  }
