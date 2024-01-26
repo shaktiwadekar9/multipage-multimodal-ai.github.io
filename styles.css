@@ -30,3 +30,10 @@ body {
 .side-by-side:not(:last-child) {
     margin-right: 10px;
 }
+
+.imageContainerleft {
+    float: left;
+ }
+ .imageContainerright {
+    float: right;
+ }
