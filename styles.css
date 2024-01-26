@@ -7,11 +7,11 @@ body {
 }
 
 .img-mmrag {
-    width: 350;
-    margin-bottom: 20;
+    width: 500;
+    margin-bottom: 25;
 }
 .img-txtrag {
-    width: 350;
+    width: 500;
 }
 
 /* Container for the images */
