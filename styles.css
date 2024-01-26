@@ -8,7 +8,6 @@ body {
 
 .img-mmrag {
     width: 500;
-    margin-bottom: 25;
 }
 .img-txtrag {
     width: 500;
@@ -18,22 +17,16 @@ body {
 .image-container {
     display: flex;
     justify-content: center; /* Align horizontal */
-    align-items: flex-start; /* Align vertical */
-    gap: 10px; /* Space between the images */
-  }
+    align-items: center; /* Align vertical */
+}
   
-  /* Style for the figures */
-  .side-by-side {
-    max-width: 50%; /* Each figure can take up to half of the container width */
-  }
+/* Style for the images */
+.side-by-side {
+    max-width: 50%; /* Each image can take up to half of the container width */
+    height: auto; /* Keep the aspect ratio */
+}
   
-  /* Style for the images within the figures */
-  .side-by-side img {
-    width: 100%; /* Make the image fill the figure element */
-    height: auto; /* Maintain aspect ratio */
-  }
-  
-  /* Caption styling */
-  .side-by-side figcaption {
-    text-align: center; /* Center the caption text */
-  }
+/* Add a little space between the images if desired */
+.side-by-side:not(:last-child) {
+    margin-right: 10px;
+}
