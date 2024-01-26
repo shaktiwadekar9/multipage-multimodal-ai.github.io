@@ -1,5 +1,7 @@
 body {
-    margin: 0;
+    /* combria. Most common: Arial, Times New Roman, and Helvetica.   */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 25px;
     background: lavenderblush;
     text-align: center;
 }
