@@ -5,3 +5,11 @@ body {
     background: lavenderblush;
     text-align: center;
 }
+
+.img-mmrag {
+    width: 300;
+    margin-bottom: 50;
+}
+.img-txtrag {
+    width: 300;
+}
