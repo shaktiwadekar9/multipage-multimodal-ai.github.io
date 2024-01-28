@@ -44,15 +44,10 @@
     <div class="center-text">
         <h3>Major changes required in current RAG systems</h2>
         <ul>
-            <li>Ingestion: Need to embed pages, instead of embedding text and images in page separately. Because page has text, table and images in a layout which are coorelated with each other.</li>
-            <li>Retrieval: Need a Multimodal model which can correlate the user query to page embeddings.</li>
-            <li>Generation: Need a Multimodal model which has ability to input multiple pages at a time. Since pdf context is present on multiple pages, a model being able to process multiple pages can generate comprehensive answers.</li>
+            <li><b><u>Ingestion</u></b>: Need to embed a pdf page into one embedding (pdf page as one image), instead of embedding text, charts, plots and figures in a page separately. Because page has text, table and images in a layout which are coorelated with each other.</li>
+            <li><b><u>Retrieval</u></b>: Need a Multimodal model which can correlate the user query to page embeddings.</li>
+            <li><b><u>Generation</u></b>: Need a Multimodal model which has ability to input multiple pages at a time. Since pdf context is present on multiple pages, a model being able to process multiple pages can generate comprehensive answers.</li>
         </ul>
-        1. Ingestion: Need to embed pages, instead of embedding text and images in page separately. Because page has text, table and images in a layout which are coorelated with each other.
-        <br>
-        2. Retrieval: Need a Multimodal model which can correlate the user query to page embeddings
-        <br>
-        3. Generation: Need a Multimodal model which has ability to input multiple pages at a time. Since pdf context is present on multiple pages, a model being able to process multiple pages can generate comprehensive answers.
     </div>
     <div class="center-text">
         <p>How build such a system?</p>
