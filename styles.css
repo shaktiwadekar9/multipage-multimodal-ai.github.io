@@ -54,3 +54,11 @@ button {
     text-align: left; /* Center the text inside the container */
     word-wrap: break-word; /* Ensure long words are wrapped */
 }
+
+.center-subheadline {
+    font-size: 18px;
+    width: 60%; /* Set the width of the container to 60% of its parent */
+    margin: 0 auto; /* Center the container */
+    text-align: center; /* Center the text inside the container */
+    word-wrap: break-word; /* Ensure long words are wrapped */
+}
