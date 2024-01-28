@@ -37,14 +37,14 @@
     <div class="center-text">
         <h3>Challenges with current Text-based RAG and Multimodal RAG systems</h3>
         <ul>
-            <li>Generation: Lack of a end-to-end multimodal model (Generation model) which can perform well on Q&A on all text, tables, charts, plots and figures in a pdf.
+            <li><b><u>Generation</u></b>: Lack of a end-to-end multimodal model (Generation model) which can perform well on Q&A on all text, tables, charts, plots and figures in a pdf.
                 LLMs can handle text very well, but the challenge is with charts, plots and figures which has text and visual elements in it with a particular 2D structure. It has been challenging to capture such diverse formatted charts, plots and figures found in pdfs.
             </li>
-            <li>Generation: Unable to handle multipage multimodal (text, tables, charts, plots, figures) context.</li>
-            <li>Ingestion: Separate models are used to ingest the content in pdf. Text and tables are extracted from pdfs and divided into chunks. 
+            <li><b><u>Generation</u></b>: Unable to handle multipage multimodal (text, tables, charts, plots, figures) context.</li>
+            <li><b><u>Ingestion</u></b>: Separate models are used to ingest the content in pdf. Text and tables are extracted from pdfs and divided into chunks. 
                 These chunks are embedded into vector database using a model (ex: SentenceBERT). 
                 Similarly, images (charts, plots, figures) are extracted and embedded using a separate model (ex: CLIP)</li>
-            <li>Retrieval: Since separate models are used to ingest the content in pdf, it results in requiring two separate models for retrieval process. 
+            <li><b><u>Retrieval</u></b>: Since separate models are used to ingest the content in pdf, it results in requiring two separate models for retrieval process. 
                 The user question is sent to text-embedding model and image-embedding model to retrieve the top-k text and images from vector database.</li>
             
             
@@ -60,10 +60,10 @@
                 Hence, this research project aims to explore an End-to-End Large Multimodal Model (Vision-encoder + LLM) to address pdf challenges.
             </li>
             <li>
-                Generation: Building and training a <b>Multipage-Multimodal model</b> which can handle all contents of PDF (text, tables, charts, plots and figures) by being able to input multiple pdf-pages as images.
+                <b><u>Generation</u></b>: Building and training a <b>Multipage-Multimodal model</b> which can handle all contents of PDF (text, tables, charts, plots and figures) by being able to input multiple pdf-pages as images.
             </li>
             <li>
-                Retrieval and Ingestion: Building and training and <b>multimodal-page-embedding model</b>. This model will be able to embed pdf pages and also help to retrieve pages using user query.
+                <b><u>Retrieval</u></b> and <b><u>Ingestion</u></b>: Building and training and <b>multimodal-page-embedding model</b>. This model will be able to embed pdf pages and also help to retrieve pages using user query.
             </li>
         </ul>
     </div>
