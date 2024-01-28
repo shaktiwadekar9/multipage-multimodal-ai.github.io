@@ -28,25 +28,62 @@
     <div class="center-subheadline">
         <h4>This research project aims to build a RAG (Retrieval-Augmented-Generation) system with a Multipage Multimodal Transformer to chat with your PDFs</h3>
     </div>
-    
+    <div>
+        Multipage-Multimodal model processes mulitple pages of PDF at once to generate comprehensive answers and multimodal RAG allows us to scale this model to a large number of pages or PDFs.
+    </div>
+    <br>
     <img class="img-mmrag-txtrag" src="imgs/contrast_llm_multimodal.png" alt="Multimodal RAG sytem">
 
     <div class="center-text">
+        <h3>Challenges with current Text-based RAG and Multimodal RAG systems</h3>
+        <ul>
+            <li>Generation: Lack of a end-to-end multimodal model (Generation model) which can perform well on Q&A on all text, tables, charts, plots and figures in a pdf.
+                LLMs can handle text very well, but the challege is with charts, plots and figures which has text and visual elements in it with a particular 2D structure. It has been challenging to capture such diverse formatted charts, plots and figures found in pdfs.
+            </li>
+            <li>Generation: Unable to handle multipage multimodal (text, tables, charts, plots, figures) context.</li>
+            <li>Ingestion: Separate models are used to ingest the content in pdf. Text and tables are extracted from pdfs and divided into chunks. 
+                These chunks are embedded into vector database using a model (ex: SentenceBERT). 
+                Similarly, images (charts, plots, figures) are extracted and embedded using a separate model (ex: CLIP)</li>
+            <li>Retrieval: Since separate models are used to ingest the content in pdf, it results in requiring two separate models for retrieval process. 
+                The user question is sent to text-embedding model and image-embedding model to retrieve the top-k text and images from vector database.</li>
+            
+            
+        </ul>
+    </div>
+    <div class="center-text">
+        <h3>Addressing these challenges with <u>Vision based approach</u></h3>
+        <ul>
+            <li>Motivation: OCR capabilities of state of art vision models have shown tremendous growth. This allows vision models to perform language related tasks (not all).
+                We can leverage these capabilities to understand all pdf context i.e, text, tables, charts, plots and figures.
+                How? By converting each pdf-page into an image and giving this image as a primary input to a multimodal model (with OCR capabilities).
+                The OCR capabilities of the model will allow it read the text, tables and text-in-charts/plots/figures & its vision model's capabilities to capture 2D structures will allow it to learn diverse charts, plots and figures.
+                Hence, this research project aims to explore an End-to-End Large Multimodal Model (Vision-encoder + LLM) to address pdf challenges.
+            </li>
+            <li>
+                Generation: Building and training a <b>Multipage-Multimodal model</b> which can handle all contents of PDF (text, tables, charts, plots and figures) by being able to input multiple pdf-pages as images.
+            </li>
+            <li>
+                Retrieval and Ingestion: Building and training and <b>multimodal-page-embedding model</b>. This model will be able to embed pdf pages and also help to retrieve pages using user query.
+            </li>
+        </ul>
+    </div>
+    <div class="center-text">
         <h3>Major changes required in current RAG systems</h2>
         <ul>
-            <li><b><u>Ingestion</u></b>: Need to embed a pdf page into one embedding (pdf page as one image), instead of embedding text, charts, plots and figures in a page separately. Because page has text, table and images in a layout which are coorelated with each other.</li>
-            <li><b><u>Retrieval</u></b>: Need a Multimodal model which can correlate the user query to page embeddings.</li>
             <li><b><u>Generation</u></b>: Need a Multimodal model which has ability to input multiple pages at a time. Since pdf context is present on multiple pages, a model being able to process multiple pages can generate comprehensive answers.</li>
+            <li><b><u>Retrieval</u></b>: Need a Multimodal model which can correlate the user query to page embeddings.</li>
+            <li><b><u>Ingestion</u></b>: Need to embed a pdf page into one embedding (pdf page as one image), instead of embedding text, charts, plots and figures in a page separately.</li>    
         </ul>
     </div>
     <div class="center-text">
         <h3>Steps to build a Multimodal RAG with Multipage Multimodal Transformer</h3>
 
         <ol>
-            <li>Train multimodal model for Q&A on single pdf page with text, table, chart, plot and figures.</li>
-            <li>Extend this multimodal architecture to handle multiple pages.</li>
+            <li>Train a multimodal model for Q&A on single pdf page with text, table, chart, plot and figures.</li>
+            <li>Extend this multimodal model architecture to create a Multipage-Multimodal-model to handle multiple pages.</li>
             <li>Train this new multipage multimodal model for Q&A on multipage pdfs.</li>
-            <li>The model will always will have page limits, hence need to build a retriever which can fetch best top-k pages for Q&A.</li>
+            <li>The model will always will have page limits, hence need a RAG (Retrieval-Augmented-Generation) system.
+                This multimodal RAG system should embedd all pdf pages and then fetch best top-k pages based on the user query to the multipage-multimodal-model for Q&A.</li>
         </ol>
     </div>
     
