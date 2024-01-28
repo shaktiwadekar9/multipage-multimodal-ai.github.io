@@ -6,6 +6,11 @@ body {
     text-align: center;
 }
 
+pre {
+    text-align: justify;
+    white-space: pre-line;
+  }
+
 .img-mmrag {
     width: 500;
 }
