@@ -6,11 +6,6 @@ body {
     text-align: center;
 }
 
-pre {
-    text-align: left;
-    white-space: pre-line;
-  }
-
 .img-mmrag {
     width: 500;
 }
@@ -21,27 +16,11 @@ pre {
     width: 500;
 }
 
-/* Container for the images */
-.image-container {
-    display: flex;
-    justify-content: center; /* Align horizontal */
-    align-items: center; /* Align vertical */
+.container {
+    text-align: center;
 }
-  
-/* Style for the images */
-.side-by-side {
-    max-width: 50%; /* Each image can take up to half of the container width */
-    height: auto; /* Keep the aspect ratio */
+.container::before {
+    content: '';
+    width: 30%;
+    display: inline-block;
 }
-  
-/* Add a little space between the images if desired */
-.side-by-side:not(:last-child) {
-    margin-right: 10px;
-}
-
-.imageContainerleft {
-    float: left;
- }
- .imageContainerright {
-    float: right;
- }
