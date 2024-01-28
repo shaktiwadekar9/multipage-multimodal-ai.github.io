@@ -28,7 +28,6 @@ body {
 .center-text {
     width: 60%; /* Set the width of the container to 60% of its parent */
     margin: 0 auto; /* Center the container */
-    text-align: justify; /* Center the text inside the container */
-    text-justify: inter-word;
+    text-align: left; /* Center the text inside the container */
     word-wrap: break-word; /* Ensure long words are wrapped */
 }
