@@ -38,7 +38,7 @@
         <h3>Challenges with current Text-based RAG and Multimodal RAG systems</h3>
         <ul>
             <li>Generation: Lack of a end-to-end multimodal model (Generation model) which can perform well on Q&A on all text, tables, charts, plots and figures in a pdf.
-                LLMs can handle text very well, but the challege is with charts, plots and figures which has text and visual elements in it with a particular 2D structure. It has been challenging to capture such diverse formatted charts, plots and figures found in pdfs.
+                LLMs can handle text very well, but the challenge is with charts, plots and figures which has text and visual elements in it with a particular 2D structure. It has been challenging to capture such diverse formatted charts, plots and figures found in pdfs.
             </li>
             <li>Generation: Unable to handle multipage multimodal (text, tables, charts, plots, figures) context.</li>
             <li>Ingestion: Separate models are used to ingest the content in pdf. Text and tables are extracted from pdfs and divided into chunks. 
@@ -54,7 +54,7 @@
         <h3>Addressing these challenges with <u>Vision based approach</u></h3>
         <ul>
             <li>Motivation: OCR capabilities of state of art vision models have shown tremendous growth. This allows vision models to perform language related tasks (not all).
-                We can leverage these capabilities to understand all pdf context i.e, text, tables, charts, plots and figures.
+                We can leverage these capabilities to understand all pdf content i.e, text, tables, charts, plots and figures.
                 How? By converting each pdf-page into an image and giving this image as a primary input to a multimodal model (with OCR capabilities).
                 The OCR capabilities of the model will allow it read the text, tables and text-in-charts/plots/figures & its vision model's capabilities to capture 2D structures will allow it to learn diverse charts, plots and figures.
                 Hence, this research project aims to explore an End-to-End Large Multimodal Model (Vision-encoder + LLM) to address pdf challenges.
@@ -83,7 +83,7 @@
             <li>Extend this multimodal model architecture to create a Multipage-Multimodal-model to handle multiple pages.</li>
             <li>Train this new multipage multimodal model for Q&A on multipage pdfs.</li>
             <li>The model will always will have page limits, hence need a RAG (Retrieval-Augmented-Generation) system.
-                This multimodal RAG system should embedd all pdf pages and then fetch best top-k pages based on the user query to the multipage-multimodal-model for Q&A.</li>
+                This multimodal RAG system should embedd all pdf pages and then fetch best top-k pages based on the user query to input to the multipage-multimodal-model for Q&A.</li>
         </ol>
     </div>
     
