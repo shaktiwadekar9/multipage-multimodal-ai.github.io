@@ -26,6 +26,7 @@ body {
 }
 
 .center-text {
+    font-size: 22px;
     width: 60%; /* Set the width of the container to 60% of its parent */
     margin: 0 auto; /* Center the container */
     text-align: left; /* Center the text inside the container */
