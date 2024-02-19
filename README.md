@@ -53,16 +53,12 @@ Text-based AI system for pdf documents exists, but a multimodal AI system for pd
 - There are tons of models addressing parts of it. Different models exist for addressing text-table data pairs, text-chart, text-plot, text-diagrams and layout detection. 
 - But few to none which can handle all (text-tables-charts-plots-diagrams-layout).
 - You may say, isn't charts, plots, diagrams are all images? and if a model is able to understand images, shouldn't it be able to comprehend all types of images?
-- Answer is, ideally it should. But most of the widely used pretrained models are trained on natural images and not necessarily on document-type images. 
+- Answer is, ideally it should. But most of the widely used pretrained models are trained on natural images and not necessarily on document-type images.
+- Natural images are the real-world object images. Like images of dogs, cats, trees and etc.
 - Below example figures 1 and 2, shows the difference between natural-images and document-type images.
 
-<p align="center">
-<img src="imgs/natural_images.png" width="400" height="200" title="Figure 1">
-</p>
-
-<p align="center">
-<img src="imgs/plotandchart.png" width="300" height="400" title="Figure 2">
-</p>
+![Natural Images](imgs/natural_images.png)
+![Document Images](imgs/plotandchart.png)
 
 - **Plot/charts like pie-chart, bar-graphs and others, have text and visual elements in it with a particular 2D layout/structure. The diversity of these 2D layout/structures is enormous.** 
 - Hence it has been a challenging task to build a well-performing model for document-type images.
