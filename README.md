@@ -199,7 +199,7 @@ Let's follow the steps listed at the start of the article, understand its import
 
 - There is a new wave of multimodal RAG system development for deploying multimodal chat-bots using LangChain, LLamaIndex and others.
 
-- **This article mainly focused on the multimodal model development which includes training and data details. There are lot of resources online to learn how to build a chat interfaces with vector databases and other frameworks. I am in process of learning those and would encourage all the readers to learn those too!**
+- **This article mainly focused on the multimodal model development which includes training and data details. There are lot of resources online to learn how to build a chat interfaces with vector databases and other frameworks.**
 
 ## Overview of SOTA document processing models:
 
